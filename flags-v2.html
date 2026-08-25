@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flags - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome ASP! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/agency-logo.png"
+                     alt="ASP agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">ASP</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="settings.html" class="usa-breadcrumb__link">Settings</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Flags</span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title page-title--underlined">Flags</h1>
+
+      <p class="margin-top-2">Definitions are specific to your agency.</p>
+
+      <div class="margin-top-2">
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="icon-key-content">
+              Icon Key
+            </button>
+          </h3>
+          <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden="">
+            <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+            <div class="icon-key-grid">
+              <div class="icon-key-item">
+                <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                <span>- View Flag</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/edit-icon.png" alt="" width="24" height="24">
+                <span>- Edit Flag</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/icon-delete.png" alt="" width="24" height="24">
+                <span>- Delete Flag</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <a href="add-flag-v2.html" class="usa-button">Add Flag Definition</a>
+      </div>
+
+      <div class="category-tabs" role="tablist" aria-label="Flag categories">
+        <button type="button" class="category-tab active" role="tab" aria-selected="true" aria-controls="flags-table" data-category="all">All (12)</button>
+        <button type="button" class="category-tab" role="tab" aria-selected="false" aria-controls="flags-table" data-category="timer">Timer (1)</button>
+        <button type="button" class="category-tab" role="tab" aria-selected="false" aria-controls="flags-table" data-category="expiration">Expiration (3)</button>
+        <button type="button" class="category-tab" role="tab" aria-selected="false" aria-controls="flags-table" data-category="event">Event (3)</button>
+        <button type="button" class="category-tab" role="tab" aria-selected="false" aria-controls="flags-table" data-category="manual">Manual (5)</button>
+      </div>
+
+      <div class="margin-top-2">
+        <div class="table-controls">
+          <div class="table-controls__left">
+            <strong id="flags-count">Showing 1 - 12 of 12 Entries</strong>
+          </div>
+          <div class="table-controls__right">
+            <label for="entries-per-page" class="table-controls__label">Show</label>
+            <select class="usa-select table-controls__select" id="entries-per-page" name="entries-per-page">
+              <option value="100" selected>100</option>
+              <option value="50">50</option>
+              <option value="25">25</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="usa-table usa-table--borderless usa-table--striped" id="flags-table">
+          <thead>
+            <tr>
+              <th scope="col" role="columnheader" aria-sort="none">Flag Name <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Description &amp; Settings <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" style="white-space: nowrap;">Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Timer -->
+            <tr data-category="timer" data-key="APPROACHING_VOID">
+              <td>
+                <span class="flag-name">Approaching Void</span>
+              </td>
+              <td>
+                <div class="flag-description">Application is nearing the 120-day automatic void threshold for cumulative constituent-controlled days. Contact the applicant before the application voids.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Warns at 1 day idle &middot; voids at 10 days</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+
+            <!-- Expiration -->
+            <tr data-category="expiration" data-key="CPR_EXPIRATION">
+              <td>
+                <span class="flag-name">CPR Expiration</span>
+              </td>
+              <td>
+                <div class="flag-description">CPR certification is expiring soon, has expired, or is missing without an exemption. Law-enforcement-exempt licensees are not flagged.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">CPR Expiration Date &middot; warns 30 days before &middot; blank dates raise unless exempt</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="expiration" data-key="INSURANCE_EXPIRATION">
+              <td>
+                <span class="flag-name">Insurance Expiration</span>
+              </td>
+              <td>
+                <div class="flag-description">Insurance policy on the license is expiring soon or has expired.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Insurance Expiration Date &middot; warns 30 days before &middot; blank dates ignored</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="expiration" data-key="REFRESHER_TRAINING_DUE">
+              <td>
+                <span class="flag-name">Refresher Training Due</span>
+              </td>
+              <td>
+                <div class="flag-description">Refresher training is due soon or overdue. Refresher training is always required, so a blank due date also raises the flag.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Refresher Training Due Date &middot; warns 90 days before &middot; blank dates raise</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+
+            <!-- Event -->
+            <tr data-category="event" data-key="FEIN_POPULATED">
+              <td>
+                <span class="flag-name">FEIN</span>
+              </td>
+              <td>
+                <div class="flag-description">Flag added when the FEIN is populated during setup.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Raised when "businessinformationfederalemployeridnumber" is "123"</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="event" data-key="FIREARM_DISCHARGE">
+              <td>
+                <span class="flag-name">Firearm Discharge</span>
+              </td>
+              <td>
+                <div class="flag-description">A firearm discharge event was recorded against this license. Event flags are permanent records; only administrators can clear them for data correction.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Raised when "Firearm Discharge Occurred" is "Yes" &middot; details from "Firearm Discharge Details" &middot; event date from "Last Discharge Date"</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="event" data-key="PHYSICAL_ADDRESS_1">
+              <td>
+                <span class="flag-name">Physical Address 1 Populated</span>
+              </td>
+              <td>
+                <div class="flag-description">Physical address 1 is populated on the record.</div>
+                <div style="font-size: 1.4rem; color: #71767a; margin-top: 0.3rem;">Raised when "Physical Address 1" is "123"</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+
+            <!-- Manual -->
+            <tr data-category="manual" data-key="ALARM_LEVEL_1_CERTIFIED">
+              <td>
+                <span class="flag-name">Alarm Level 1 Certified</span>
+              </td>
+              <td>
+                <div class="flag-description">Credential holder completed Alarm Level 1 training.</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="manual" data-key="DELINQUENT">
+              <td>
+                <span class="flag-name">Delinquent</span>
+              </td>
+              <td>
+                <div class="flag-description">Account or filing is delinquent.</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="manual" data-key="INVESTIGATION_SUBJECT">
+              <td>
+                <span class="flag-name">Investigation Subject</span>
+              </td>
+              <td>
+                <div class="flag-description">License holder is under investigation. Clear when the investigation concludes.</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="manual" data-key="PENDING_SUPERVISOR_REVIEW">
+              <td>
+                <span class="flag-name">Pending Supervisor Review</span>
+              </td>
+              <td>
+                <div class="flag-description">Application or license needs additional scrutiny from a supervisor before further action.</div>
+              </td>
+              <td><span class="flag-status status-inactive">Inactive</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr data-category="manual" data-key="SPECIAL_EXEMPTION_APPROVED">
+              <td>
+                <span class="flag-name">Special Exemption Approved</span>
+              </td>
+              <td>
+                <div class="flag-description">A non-standard waiver or exemption was granted for this record.</div>
+              </td>
+              <td><span class="flag-status status-active">Active</span></td>
+              <td style="white-space: nowrap;">
+                <a href="#" class="icon-button view-flag-btn" aria-label="View Flag">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-flag-v2.html" class="icon-button edit-flag-btn" aria-label="Edit Flag">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button delete-flag-btn" aria-label="Delete Flag">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="success-notification" class="notification" hidden>
+    <svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" fill="#00a91c" stroke="#00a91c" stroke-width="2"/>
+      <path d="M7 13l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="notification-text">Flag deleted successfully</span>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="delete-confirmation-modal" class="modal" hidden>
+    <div class="modal-overlay"></div>
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Delete Flag</h2>
+        <button type="button" class="modal-close" aria-label="Close modal" id="delete-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this Flag?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="usa-button" id="confirm-delete">Delete</button>
+        <button type="button" class="usa-button usa-button--secondary" id="cancel-delete">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Flag Modal -->
+  <div id="view-flag-modal" class="modal" hidden>
+    <div class="modal-overlay"></div>
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal-header">
+        <h2 class="modal-title">View Flag</h2>
+        <button type="button" class="modal-close" aria-label="Close modal" id="view-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-field">
+          <div class="modal-field__label">Name</div>
+          <div class="modal-field__value" id="view-flag-key"></div>
+        </div>
+        <div class="modal-field">
+          <div class="modal-field__label">Category</div>
+          <div class="modal-field__value" id="view-flag-category"></div>
+        </div>
+        <div class="modal-field">
+          <div class="modal-field__label">Label</div>
+          <div class="modal-field__value" id="view-flag-label"></div>
+        </div>
+        <div class="modal-field">
+          <div class="modal-field__label">Description</div>
+          <div class="modal-field__value" id="view-flag-description"></div>
+        </div>
+        <div class="modal-field">
+          <div class="modal-field__label">Status</div>
+          <div class="modal-field__value" id="view-flag-status"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="usa-button usa-button--secondary" id="view-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Apply any pending edit saved by edit-flag-v2.html
+    (function() {
+      var pending = localStorage.getItem('flagUpdateV2');
+      if (!pending) return;
+      var update = JSON.parse(pending);
+      var rows = document.querySelectorAll('#flags-table tbody tr');
+      var row = rows[update.rowIndex];
+      if (row) {
+        var nameEl = row.querySelector('.flag-name');
+        var descEl = row.querySelector('.flag-description');
+        var statusEl = row.querySelector('.flag-status');
+        if (nameEl) nameEl.textContent = update.label;
+        if (descEl) descEl.textContent = update.description;
+        if (statusEl) {
+          statusEl.textContent = update.status;
+          statusEl.className = 'flag-status ' + (update.status === 'Active' ? 'status-active' : 'status-inactive');
+        }
+      }
+      localStorage.removeItem('flagUpdateV2');
+    })();
+
+    // Sync Manual flag definitions to localStorage — these are the only flags
+    // staff can raise by hand, so they're what populate the "add a flag" picker
+    // on the individual profile page. Timer/Expiration/Event flags are raised
+    // automatically by the system and aren't offered there.
+    function syncFlagDefinitions() {
+      var rows = document.querySelectorAll('#flags-table tbody tr[data-category="manual"]');
+      var definitions = [];
+      rows.forEach(function(row) {
+        var name = row.querySelector('.flag-name').textContent.trim();
+        var description = row.querySelector('.flag-description').textContent.trim();
+        var statusEl = row.querySelector('.flag-status');
+        var status = statusEl ? statusEl.textContent.trim() : '';
+        definitions.push({ name: name, description: description, status: status });
+      });
+      localStorage.setItem('flagDefinitions', JSON.stringify(definitions));
+    }
+
+    syncFlagDefinitions();
+
+    // Edit button handlers — store row data before navigating
+    document.querySelectorAll('.edit-flag-btn').forEach(function(btn, index) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var row = this.closest('tr');
+        var label = row.querySelector('.flag-name').textContent.trim();
+        var description = row.querySelector('.flag-description').textContent.trim();
+        var statusEl = row.querySelector('.flag-status');
+        localStorage.setItem('editingFlagV2', JSON.stringify({
+          rowIndex: index,
+          key: row.getAttribute('data-key') || '',
+          category: row.getAttribute('data-category') || '',
+          label: label,
+          description: description,
+          status: statusEl ? statusEl.textContent.trim() : 'Active'
+        }));
+        window.location.href = 'edit-flag-v2.html';
+      });
+    });
+
+    // View button handlers — populate the read-only modal from row data
+    const viewModal = document.getElementById('view-flag-modal');
+    const viewModalOverlay = viewModal.querySelector('.modal-overlay');
+
+    function closeViewModal() {
+      viewModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.view-flag-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var row = this.closest('tr');
+        var category = row.getAttribute('data-category') || '';
+        var statusEl = row.querySelector('.flag-status');
+        document.getElementById('view-flag-key').textContent = row.getAttribute('data-key') || '';
+        document.getElementById('view-flag-category').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        document.getElementById('view-flag-label').textContent = row.querySelector('.flag-name').textContent.trim();
+        document.getElementById('view-flag-description').textContent = row.querySelector('.flag-description').textContent.trim();
+        document.getElementById('view-flag-status').textContent = statusEl ? statusEl.textContent.trim() : '';
+        viewModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    document.getElementById('view-close').addEventListener('click', closeViewModal);
+    document.getElementById('view-close-btn').addEventListener('click', closeViewModal);
+    viewModalOverlay.addEventListener('click', closeViewModal);
+
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
+
+    // Category tab filtering
+    function applyCategoryFilter(category) {
+      const rows = document.querySelectorAll('#flags-table tbody tr');
+      let visibleCount = 0;
+      rows.forEach(function(row) {
+        const matches = category === 'all' || row.getAttribute('data-category') === category;
+        row.hidden = !matches;
+        if (matches) visibleCount++;
+      });
+      document.getElementById('flags-count').textContent =
+        visibleCount > 0 ? `Showing 1 - ${visibleCount} of ${visibleCount} Entries` : 'Showing 0 - 0 of 0 Entries';
+    }
+
+    document.querySelectorAll('.category-tab').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.category-tab').forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+        applyCategoryFilter(this.getAttribute('data-category'));
+      });
+    });
+
+    // Delete modal
+    const deleteModal = document.getElementById('delete-confirmation-modal');
+    const deleteModalOverlay = deleteModal.querySelector('.modal-overlay');
+    let rowToDelete = null;
+
+    document.querySelectorAll('.delete-flag-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        rowToDelete = this.closest('tr');
+        deleteModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeDeleteModal() {
+      deleteModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      rowToDelete = null;
+    }
+
+    document.getElementById('delete-close').addEventListener('click', closeDeleteModal);
+    document.getElementById('cancel-delete').addEventListener('click', closeDeleteModal);
+    deleteModalOverlay.addEventListener('click', closeDeleteModal);
+
+    document.getElementById('confirm-delete').addEventListener('click', function() {
+      if (rowToDelete) {
+        rowToDelete.remove();
+        const activeCategory = document.querySelector('.category-tab.active').getAttribute('data-category');
+        applyCategoryFilter(activeCategory);
+        syncFlagDefinitions();
+        showNotification();
+      }
+      closeDeleteModal();
+    });
+
+    function showNotification() {
+      const notification = document.getElementById('success-notification');
+      notification.removeAttribute('hidden');
+      setTimeout(() => notification.classList.add('show'), 10);
+      setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+        setTimeout(() => {
+          notification.classList.remove('hide');
+          notification.setAttribute('hidden', '');
+        }, 400);
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
