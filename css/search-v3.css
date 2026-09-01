@@ -220,6 +220,23 @@
   margin: 1.2rem 0 0;
 }
 
+/* Two-column layout
+   The generic .grid-gap / .margin-top-3 utilities are not in styles.css, so the
+   gutter and the gap below the filter bar are set explicitly here.
+   ========================================================================== */
+
+.search-layout {
+  margin-top: 4rem;
+}
+
+.search-layout__rail {
+  padding-right: 1.6rem;
+}
+
+.search-layout__results {
+  padding-left: 1.6rem;
+}
+
 /* Facet rail
    ========================================================================== */
 
