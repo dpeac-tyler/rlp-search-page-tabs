@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search (V3 - Unified) - RLP</title>
+<!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/search-v3.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome ASP! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/agency-logo.png"
+                     alt="ASP agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">ASP</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+
+    <main id="main-content" class="grid-container">
+      <h1 class="page-title page-title--underlined">Search</h1>
+
+      <div class="margin-top-2">
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="icon-key-content">
+              Icon Key
+            </button>
+          </h3>
+          <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden="">
+            <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+            <div class="icon-key-grid">
+              <div class="icon-key-item">
+                <img src="assets/view-applicant-profile.png" alt="" width="24" height="24">
+                <span>- View Applicant Profile</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/download-certificate.png" alt="" width="24" height="24">
+                <span>- Download Certificate</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/view-submission.png" alt="" width="24" height="24">
+                <span>- View Submission</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/initiate-inspection.png" alt="" width="24" height="24">
+                <span>- Initiate Inspection</span>
+              </div>
+              <div class="icon-key-item">
+                <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                <span>- View Record</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Omnibox: one input searches every category. Everything below it is
+           optional refinement, so a first-time user only has to do one thing. -->
+      <div class="omnibox">
+        <label class="usa-label" for="omni-query">Search</label>
+        <div class="usa-hint" id="omni-hint">
+          Searches constituents, licenses, submissions, invoices, assets and inspections at once &mdash;
+          name, business name, email, FEIN, or any ID number. Power users can type
+          <code>field:value</code> (e.g. <code>license:01234567</code>, <code>status:approved</code>, <code>city:Harrisburg</code>).
+        </div>
+        <div class="omnibox__row">
+          <div class="omnibox__field">
+            <svg class="omnibox__icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+              <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+            </svg>
+            <input class="usa-input omnibox__input" id="omni-query" name="omni-query" type="text"
+                   autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list"
+                   aria-controls="omni-suggestions" aria-describedby="omni-hint"
+                   placeholder="Search by name, license, submission, invoice, asset or inspection&hellip;">
+            <div class="suggestions" id="omni-suggestions" role="listbox" aria-label="Suggestions" hidden></div>
+          </div>
+          <button type="button" class="usa-button" id="btn-search">Search</button>
+          <button type="button" class="usa-button usa-button--outline" id="btn-clear">Clear</button>
+        </div>
+        <div class="recent">
+          <span class="recent__label">Recent searches:</span>
+          <button type="button" class="recent__chip" data-recent="Sarah Johnson">Sarah Johnson</button>
+          <button type="button" class="recent__chip" data-recent='status:"past due"'>status:&quot;past due&quot;</button>
+          <button type="button" class="recent__chip" data-recent="DNR-2024">DNR-2024</button>
+        </div>
+      </div>
+
+      <!-- Applied filters. All of the V2 "Additional Criteria" fields live behind
+           Add Filter, offered one at a time instead of forty at once. -->
+      <div class="filter-bar">
+        <button type="button" class="usa-button" id="btn-add-filter">+ Add Filter</button>
+        <div class="filter-chips" id="filter-chips"></div>
+        <button type="button" class="usa-button usa-button--unstyled" id="btn-clear-filters" hidden>Clear all filters</button>
+      </div>
+
+      <div class="filter-builder" id="filter-builder" hidden>
+        <div class="filter-builder__grid">
+          <div>
+            <label class="usa-label" for="fb-field">Field</label>
+            <select class="usa-select" id="fb-field">
+              <option value="">Please Select</option>
+            </select>
+          </div>
+          <div id="fb-value-wrap">
+            <label class="usa-label" for="fb-value">Value</label>
+            <input class="usa-input" id="fb-value" name="fb-value" type="text" disabled>
+          </div>
+          <div>
+            <button type="button" class="usa-button usa-button--accent-warm" id="btn-apply-filter">Add</button>
+          </div>
+        </div>
+        <p class="filter-builder__note" id="fb-note">
+          Fields are grouped by category. Adding a field from a category narrows the results to that category.
+        </p>
+      </div>
+
+      <div class="grid-row grid-gap margin-top-3">
+        <!-- Facet rail: category is a filter, not a mode switch, so results
+             never disappear and the counts show what else matched. -->
+        <div class="tablet:grid-col-3">
+          <div class="facet-panel">
+            <h2 class="facet-panel__title">Category</h2>
+            <ul class="facet-list" id="facet-category"></ul>
+
+            <h2 class="facet-panel__title">Status</h2>
+            <ul class="facet-list" id="facet-status"></ul>
+
+            <h2 class="facet-panel__title">Last Updated</h2>
+            <select class="usa-select" id="facet-updated" name="facet-updated" aria-label="Last updated">
+              <option value="any" selected>Any time</option>
+              <option value="7">Last 7 days</option>
+              <option value="30">Last 30 days</option>
+              <option value="90">Last 90 days</option>
+              <option value="365">Last 12 months</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tablet:grid-col-9">
+          <p class="results-summary" id="results-summary"></p>
+
+          <div class="table-controls">
+            <div class="table-controls__left">
+              <strong id="entries-count">Showing 0 - 0 of 0 Entries</strong>
+            </div>
+            <div class="table-controls__right">
+              <div class="results-sort">
+                <label for="sort-by" class="table-controls__label">Sort</label>
+                <select class="usa-select table-controls__select" id="sort-by" name="sort-by">
+                  <option value="relevance" selected>Best match</option>
+                  <option value="updated">Last updated</option>
+                  <option value="title">Name A&ndash;Z</option>
+                </select>
+              </div>
+              <label for="entries-per-page" class="table-controls__label">Show</label>
+              <select class="usa-select table-controls__select" id="entries-per-page" name="entries-per-page">
+                <option value="100" selected>100</option>
+                <option value="50">50</option>
+                <option value="25">25</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="results-wrap"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    /* ----------------------------------------------------------------------
+       Accordion (same behaviour as the other search pages)
+       ---------------------------------------------------------------------- */
+    document.querySelectorAll('.usa-accordion__button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        var content = document.getElementById(this.getAttribute('aria-controls'));
+        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        if (expanded) { content.setAttribute('hidden', ''); } else { content.removeAttribute('hidden'); }
+      });
+    });
+
+    /* ----------------------------------------------------------------------
+       Categories
+       ---------------------------------------------------------------------- */
+    var CATEGORIES = [
+      { key: 'constituent', label: 'Constituents' },
+      { key: 'license',     label: 'Licenses' },
+      { key: 'submission',  label: 'Submissions' },
+      { key: 'invoice',     label: 'Invoices' },
+      { key: 'asset',       label: 'Assets',      optional: true },
+      { key: 'inspection',  label: 'Inspections', optional: true }
+    ];
+
+    var CATEGORY_LABEL = {};
+    CATEGORIES.forEach(function (c) { CATEGORY_LABEL[c.key] = c.label; });
+
+    /* ----------------------------------------------------------------------
+       Sample records. One flat set across every category — that is the whole
+       point of V3: a single index instead of six separate search forms.
+       ---------------------------------------------------------------------- */
+    var RECORDS = [
+      { type: 'constituent', id: '012345678', title: 'Sarah Johnson', sub: 'Individual &middot; Harrisburg, PA &middot; sarah.johnson@example.com',
+        status: 'Active', updated: '2026-08-24', customer: '012345678', email: 'sarah.johnson@example.com', fein: '', city: 'Harrisburg', state: 'PA', zip: '17101' },
+      { type: 'constituent', id: '023456789', title: 'Chen Environmental Services LLC', sub: 'Business &middot; DBA Chen Enviro &middot; Pittsburgh, PA',
+        status: 'Active', updated: '2026-08-18', customer: '023456789', email: 'mchen@chenenviro.com', fein: '45-8871203', city: 'Pittsburgh', state: 'PA', zip: '15213' },
+      { type: 'constituent', id: '034567890', title: 'Jennifer Williams', sub: 'Individual &middot; Erie, PA &middot; j.williams@example.com',
+        status: 'Inactive', updated: '2026-05-02', customer: '034567890', email: 'j.williams@example.com', fein: '', city: 'Erie', state: 'PA', zip: '16501' },
+      { type: 'constituent', id: '045678901', title: 'Martinez Well Drilling, Inc.', sub: 'Business &middot; Allentown, PA &middot; FEIN 23-4419980',
+        status: 'Active', updated: '2026-07-29', customer: '045678901', email: 'dmartinez@mwdrilling.com', fein: '23-4419980', city: 'Allentown', state: 'PA', zip: '18101' },
+
+      { type: 'license', id: '01234567', title: 'Commercial Pesticide Applicator', sub: 'Sarah Johnson &middot; Issued 05/01/2024 &middot; Expires 04/30/2027',
+        status: 'Active', updated: '2026-08-12', license: '01234567', licenseType: 'Commercial Pesticide Applicator', name: 'Sarah Johnson', issued: '2024-05-01', expires: '2027-04-30' },
+      { type: 'license', id: '02345678', title: 'Waste Hauler Permit', sub: 'Chen Environmental Services LLC &middot; Expires 12/31/2026',
+        status: 'Active', updated: '2026-06-30', license: '02345678', licenseType: 'Waste Hauler Permit', name: 'Chen Environmental Services LLC', issued: '2023-01-15', expires: '2026-12-31' },
+      { type: 'license', id: '03456789', title: 'Water Well Driller License', sub: 'Martinez Well Drilling, Inc. &middot; Expired 06/30/2026',
+        status: 'Expired', updated: '2026-07-01', license: '03456789', licenseType: 'Water Well Driller License', name: 'Martinez Well Drilling, Inc.', issued: '2021-07-01', expires: '2026-06-30' },
+      { type: 'license', id: '04567890', title: 'Commercial Pesticide Applicator', sub: 'Jennifer Williams &middot; Revoked 03/14/2026',
+        status: 'Revoked', updated: '2026-03-14', license: '04567890', licenseType: 'Commercial Pesticide Applicator', name: 'Jennifer Williams', issued: '2022-03-01', expires: '2026-02-28' },
+
+      { type: 'submission', id: '723456789', title: 'Renewal Application &mdash; Form DNR-2024-A', sub: 'Sarah Johnson &middot; License 01234567 &middot; Submitted 03/15/2026',
+        status: 'Approved', updated: '2026-03-20', submission: '723456789', license: '01234567', name: 'Sarah Johnson', form: 'DNR-2024-A', applicationType: 'Renewal', submitted: '2026-03-15', transaction: 'TRN-556201' },
+      { type: 'submission', id: '734567890', title: 'New Application &mdash; Form DNR-2024-B', sub: 'Chen Environmental Services LLC &middot; Submitted 03/16/2026',
+        status: 'Pending', updated: '2026-08-27', submission: '734567890', license: '02345678', name: 'Chen Environmental Services LLC', form: 'DNR-2024-B', applicationType: 'New', submitted: '2026-03-16', transaction: 'TRN-556318' },
+      { type: 'submission', id: '745678901', title: 'Amendment &mdash; Form DNR-2024-C', sub: 'Jennifer Williams &middot; Submitted 03/17/2026',
+        status: 'Denied', updated: '2026-04-02', submission: '745678901', license: '04567890', name: 'Jennifer Williams', form: 'DNR-2024-C', applicationType: 'Amendment', submitted: '2026-03-17', transaction: 'TRN-556402' },
+      { type: 'submission', id: '756789012', title: 'Renewal Application &mdash; Form DNR-2024-D', sub: 'Martinez Well Drilling, Inc. &middot; Submitted 08/18/2026',
+        status: 'In Progress', updated: '2026-08-29', submission: '756789012', license: '03456789', name: 'Martinez Well Drilling, Inc.', form: 'DNR-2024-D', applicationType: 'Renewal', submitted: '2026-08-18', transaction: 'TRN-561877' },
+
+      { type: 'invoice', id: 'INV-2026-0041', title: 'Renewal Fee &mdash; $325.00', sub: 'Sarah Johnson &middot; Issued 07/01/2026 &middot; Due 07/31/2026',
+        status: 'Paid', updated: '2026-07-18', invoice: 'INV-2026-0041', name: 'Sarah Johnson', amount: '325.00', invoiceDate: '2026-07-01', due: '2026-07-31' },
+      { type: 'invoice', id: 'INV-2026-0088', title: 'Application Fee &mdash; $1,150.00', sub: 'Chen Environmental Services LLC &middot; Due 08/15/2026',
+        status: 'Past Due', updated: '2026-08-16', invoice: 'INV-2026-0088', name: 'Chen Environmental Services LLC', amount: '1,150.00', invoiceDate: '2026-07-15', due: '2026-08-15' },
+      { type: 'invoice', id: 'INV-2026-0102', title: 'Late Penalty &mdash; $75.00', sub: 'Martinez Well Drilling, Inc. &middot; Due 09/15/2026',
+        status: 'Open', updated: '2026-08-22', invoice: 'INV-2026-0102', name: 'Martinez Well Drilling, Inc.', amount: '75.00', invoiceDate: '2026-08-15', due: '2026-09-15' },
+
+      { type: 'asset', id: '1HGCM82633A004352', title: 'Tank Truck &mdash; VIN 1HGCM82633A004352', sub: 'Chen Environmental Services LLC &middot; Vehicle &middot; 2 active licenses',
+        status: 'Active', updated: '2026-06-11', idType: 'VIN', idValue: '1HGCM82633A004352', assetType: 'Vehicle', modifiedBy: 'A. Reyes', name: 'Chen Environmental Services LLC' },
+      { type: 'asset', id: 'RIG-44821', title: 'Rotary Drill Rig &mdash; Serial RIG-44821', sub: 'Martinez Well Drilling, Inc. &middot; Equipment &middot; 1 active license',
+        status: 'Active', updated: '2026-08-05', idType: 'Serial Number', idValue: 'RIG-44821', assetType: 'Equipment', modifiedBy: 'T. Okafor', name: 'Martinez Well Drilling, Inc.' },
+      { type: 'asset', id: '19-004-118-000', title: 'Storage Yard &mdash; Parcel 19-004-118-000', sub: 'Chen Environmental Services LLC &middot; Structure &middot; Pittsburgh, PA',
+        status: 'Decommissioned', updated: '2026-02-14', idType: 'Parcel ID', idValue: '19-004-118-000', assetType: 'Structure', modifiedBy: 'A. Reyes', name: 'Chen Environmental Services LLC' },
+
+      { type: 'inspection', id: 'INSP-10428', title: 'Site Inspection &mdash; Storage Yard', sub: 'Chen Environmental Services LLC &middot; Completed 04/28/2026 &middot; Passed',
+        status: 'Completed', updated: '2026-04-28', inspection: 'INSP-10428', inspectionType: 'Site Inspection', outcome: 'Passed', dueDate: '2026-05-01', completed: '2026-04-28', name: 'Chen Environmental Services LLC' },
+      { type: 'inspection', id: 'INSP-10553', title: 'Equipment Inspection &mdash; Rotary Drill Rig', sub: 'Martinez Well Drilling, Inc. &middot; Due 09/12/2026',
+        status: 'Assigned', updated: '2026-08-25', inspection: 'INSP-10553', inspectionType: 'Equipment Inspection', outcome: '', dueDate: '2026-09-12', completed: '', name: 'Martinez Well Drilling, Inc.' },
+      { type: 'inspection', id: 'INSP-10609', title: 'Complaint Inspection &mdash; Applicator Records', sub: 'Jennifer Williams &middot; Completed 03/09/2026 &middot; Failed',
+        status: 'Completed', updated: '2026-03-09', inspection: 'INSP-10609', inspectionType: 'Complaint Inspection', outcome: 'Failed', dueDate: '2026-03-06', completed: '2026-03-09', name: 'Jennifer Williams' }
+    ];
+
+    /* ----------------------------------------------------------------------
+       Every V2 advanced field, catalogued once. The Add Filter picker builds
+       itself from this list, so a new field is one line here instead of a new
+       form row on a new tab.
+       ---------------------------------------------------------------------- */
+    var FIELDS = [
+      { cat: 'constituent', key: 'title',          label: 'Constituent Name',         control: 'text' },
+      { cat: 'constituent', key: 'email',          label: 'Email',                    control: 'text' },
+      { cat: 'constituent', key: 'fein',           label: 'FEIN Number',              control: 'text' },
+      { cat: 'constituent', key: 'customer',       label: 'Customer Number',          control: 'text' },
+      { cat: 'constituent', key: 'city',           label: 'Physical City',            control: 'text' },
+      { cat: 'constituent', key: 'state',          label: 'Physical State',           control: 'select', options: ['PA', 'OH', 'NY', 'MD', 'WV'] },
+      { cat: 'constituent', key: 'zip',            label: 'Physical Zip Code',        control: 'text' },
+
+      { cat: 'license',     key: 'license',        label: 'License Number',           control: 'text' },
+      { cat: 'license',     key: 'licenseType',    label: 'License Type',             control: 'select', options: ['Commercial Pesticide Applicator', 'Waste Hauler Permit', 'Water Well Driller License'] },
+      { cat: 'license',     key: 'expires',        label: 'Expiration Date',          control: 'date' },
+
+      { cat: 'submission',  key: 'submission',     label: 'Submission Number',        control: 'text' },
+      { cat: 'submission',  key: 'form',           label: 'Form Number',              control: 'text' },
+      { cat: 'submission',  key: 'applicationType',label: 'Application Type',         control: 'select', options: ['New', 'Renewal', 'Amendment'] },
+      { cat: 'submission',  key: 'submitted',      label: 'Submitted Date',           control: 'date' },
+      { cat: 'submission',  key: 'status',         label: 'Submission Review Status', control: 'select', options: ['Approved', 'Pending', 'Denied', 'In Progress'] },
+      { cat: 'submission',  key: 'transaction',    label: 'Transaction Number',       control: 'text' },
+
+      { cat: 'invoice',     key: 'invoice',        label: 'Invoice Number',           control: 'text' },
+      { cat: 'invoice',     key: 'amount',         label: 'Amount Due',               control: 'text' },
+      { cat: 'invoice',     key: 'due',            label: 'Due Date',                 control: 'date' },
+
+      { cat: 'asset',       key: 'assetType',      label: 'Asset Type',               control: 'select', options: ['Vehicle', 'Equipment', 'Structure'] },
+      { cat: 'asset',       key: 'idType',         label: 'ID Type',                  control: 'select', options: ['VIN', 'Serial Number', 'Parcel ID'] },
+      { cat: 'asset',       key: 'idValue',        label: 'ID Value',                 control: 'text' },
+
+      { cat: 'inspection',  key: 'inspectionType', label: 'Inspection Type',          control: 'select', options: ['Site Inspection', 'Equipment Inspection', 'Complaint Inspection'] },
+      { cat: 'inspection',  key: 'outcome',        label: 'Inspection Outcome',       control: 'select', options: ['Passed', 'Failed'] },
+      { cat: 'inspection',  key: 'dueDate',        label: 'Due Date',                 control: 'date' }
+    ];
+
+    /* Shorthand accepted in the omnibox as field:value */
+    var SYNTAX = {
+      name: 'title', constituent: 'title', email: 'email', fein: 'fein', customer: 'customer',
+      city: 'city', state: 'state', zip: 'zip', license: 'license', type: 'licenseType',
+      submission: 'submission', form: 'form', invoice: 'invoice', asset: 'idValue',
+      inspection: 'inspection', status: 'status'
+    };
+
+    /* Column sets. Broad scope gets one generic table; scope to a single
+       category and the table becomes that category's full column set. */
+    var COLUMNS = {
+      all: [
+        { label: 'Category', render: function (r) { return typeBadge(r); } },
+        { label: 'ID / Number', render: function (r) { return hl(r.id); } },
+        { label: 'Name / Description', render: function (r) { return '<span class="result-title">' + hl(r.title) + '</span><span class="result-sub">' + r.sub + '</span>'; } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } },
+        { label: 'Last Updated', render: function (r) { return fmt(r.updated); } }
+      ],
+      constituent: [
+        { label: 'Customer Number', render: function (r) { return hl(r.customer); } },
+        { label: 'Constituent Name', render: function (r) { return hl(r.title); } },
+        { label: 'Email', render: function (r) { return hl(r.email); } },
+        { label: 'FEIN Number', render: function (r) { return hl(r.fein) || '&mdash;'; } },
+        { label: 'City, State', render: function (r) { return hl(r.city) + ', ' + r.state; } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } }
+      ],
+      license: [
+        { label: 'License Number', render: function (r) { return hl(r.license); } },
+        { label: 'License Type', render: function (r) { return hl(r.licenseType); } },
+        { label: 'Constituent Name', render: function (r) { return hl(r.name); } },
+        { label: 'Issue Date', render: function (r) { return fmt(r.issued); } },
+        { label: 'Expiration Date', render: function (r) { return fmt(r.expires); } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } }
+      ],
+      submission: [
+        { label: 'Submission Number', render: function (r) { return hl(r.submission); } },
+        { label: 'License Number', render: function (r) { return hl(r.license); } },
+        { label: 'Constituent Name', render: function (r) { return hl(r.name); } },
+        { label: 'Form Number', render: function (r) { return hl(r.form); } },
+        { label: 'Submitted Date', render: function (r) { return fmt(r.submitted); } },
+        { label: 'Submission Review Status', render: function (r) { return statusText(r.status); } }
+      ],
+      invoice: [
+        { label: 'Invoice Number', render: function (r) { return hl(r.invoice); } },
+        { label: 'Constituent Name', render: function (r) { return hl(r.name); } },
+        { label: 'Invoice Date', render: function (r) { return fmt(r.invoiceDate); } },
+        { label: 'Due Date', render: function (r) { return fmt(r.due); } },
+        { label: 'Amount Due', render: function (r) { return '$' + r.amount; } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } }
+      ],
+      asset: [
+        { label: 'ID Type', render: function (r) { return r.idType; } },
+        { label: 'ID Value', render: function (r) { return hl(r.idValue); } },
+        { label: 'Asset Type', render: function (r) { return hl(r.assetType); } },
+        { label: 'Modified By', render: function (r) { return r.modifiedBy; } },
+        { label: 'Modified Date', render: function (r) { return fmt(r.updated); } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } }
+      ],
+      inspection: [
+        { label: 'Inspection ID', render: function (r) { return hl(r.inspection); } },
+        { label: 'Type', render: function (r) { return hl(r.inspectionType); } },
+        { label: 'Outcome', render: function (r) { return r.outcome ? statusText(r.outcome) : '&mdash;'; } },
+        { label: 'Due Date', render: function (r) { return fmt(r.dueDate); } },
+        { label: 'Completion Date', render: function (r) { return r.completed ? fmt(r.completed) : '&mdash;'; } },
+        { label: 'Status', render: function (r) { return statusText(r.status); } }
+      ]
+    };
+
+    var CONTROLS = {
+      constituent: { href: 'individual-profile.html', icon: 'view-applicant-profile.png', label: 'View Applicant Profile' },
+      license:     { href: 'individual-profile.html', icon: 'download-certificate.png',   label: 'Download Certificate' },
+      submission:  { href: 'task-detail.html',        icon: 'view-submission.png',        label: 'View Submission' },
+      invoice:     { href: 'individual-profile.html', icon: 'eye-icon.png',               label: 'View Record' },
+      asset:       { href: 'individual-profile.html', icon: 'eye-icon.png',               label: 'View Record' },
+      inspection:  { href: 'view-inspection.html',    icon: 'initiate-inspection.png',    label: 'Initiate Inspection' }
+    };
+
+    /* ----------------------------------------------------------------------
+       State
+       ---------------------------------------------------------------------- */
+    var state = { query: '', category: 'all', statuses: [], updated: 'any', sort: 'relevance', filters: [] };
+    var TODAY = new Date('2026-09-01T00:00:00');
+
+    /* ----------------------------------------------------------------------
+       Helpers
+       ---------------------------------------------------------------------- */
+    function plain(html) { return String(html == null ? '' : html).replace(/&[a-z]+;/g, ' '); }
+
+    function haystack(r) {
+      return Object.keys(r).map(function (k) { return plain(r[k]); }).join(' ').toLowerCase();
+    }
+
+    function fmt(iso) {
+      if (!iso) { return '&mdash;'; }
+      var p = iso.split('-');
+      return p[1] + '/' + p[2] + '/' + p[0];
+    }
+
+    function statusText(status) {
+      var cls = 'status-' + status.toLowerCase().replace(/\s+/g, '-');
+      return '<span class="' + cls + ' text-bold">' + status + '</span>';
+    }
+
+    function typeBadge(r) {
+      return '<span class="type-badge type-badge--' + r.type + '">' + CATEGORY_LABEL[r.type].replace(/s$/, '') + '</span>';
+    }
+
+    /* Highlights the free-text term inside a cell, the way a search engine would. */
+    function hl(value) {
+      var text = value == null ? '' : String(value);
+      var term = freeText().trim();
+      if (!term || term.length < 2 || !text) { return text; }
+      var safe = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return text.replace(new RegExp('(' + safe + ')', 'ig'), '<mark class="result-hit">$1</mark>');
+    }
+
+    /* Free text = the omnibox query with any field:value tokens stripped out. */
+    function freeText() {
+      return state.query.replace(/([a-z]+):("[^"]*"|[^\s]+)/gi, function (m, key) {
+        return SYNTAX[key.toLowerCase()] ? '' : m;
+      }).trim();
+    }
+
+    function syntaxFilters() {
+      var out = [];
+      state.query.replace(/([a-z]+):("[^"]*"|[^\s]+)/gi, function (m, key, val) {
+        var mapped = SYNTAX[key.toLowerCase()];
+        if (mapped) { out.push({ key: mapped, value: val.replace(/"/g, ''), label: key, syntax: true }); }
+        return m;
+      });
+      return out;
+    }
+
+    function daysAgo(iso) {
+      return Math.floor((TODAY - new Date(iso + 'T00:00:00')) / 86400000);
+    }
+
+    /* ----------------------------------------------------------------------
+       Filtering. Applied in layers so each facet can be counted with the
+       others held constant.
+       ---------------------------------------------------------------------- */
+    function matchesQueryAndFilters(r) {
+      var term = freeText().toLowerCase();
+      if (term && haystack(r).indexOf(term) === -1) { return false; }
+
+      var all = state.filters.concat(syntaxFilters());
+      for (var i = 0; i < all.length; i++) {
+        var f = all[i];
+        var v = r[f.key];
+        /* A field filter only matches records that actually carry that field,
+           which is what implicitly scopes results to the right category. */
+        if (v == null || v === '') { return false; }
+        if (plain(v).toLowerCase().indexOf(String(f.value).toLowerCase()) === -1) { return false; }
+      }
+
+      if (state.updated !== 'any' && daysAgo(r.updated) > parseInt(state.updated, 10)) { return false; }
+      return true;
+    }
+
+    function matchesCategory(r) { return state.category === 'all' || r.type === state.category; }
+    function matchesStatus(r) { return state.statuses.length === 0 || state.statuses.indexOf(r.status) !== -1; }
+
+    function results() {
+      var rows = RECORDS.filter(function (r) {
+        return matchesQueryAndFilters(r) && matchesCategory(r) && matchesStatus(r);
+      });
+
+      if (state.sort === 'updated') {
+        rows.sort(function (a, b) { return a.updated < b.updated ? 1 : -1; });
+      } else if (state.sort === 'title') {
+        rows.sort(function (a, b) { return plain(a.title).localeCompare(plain(b.title)); });
+      }
+      return rows;
+    }
+
+    /* ----------------------------------------------------------------------
+       Render: facets
+       ---------------------------------------------------------------------- */
+    function renderCategoryFacet() {
+      var base = RECORDS.filter(function (r) { return matchesQueryAndFilters(r) && matchesStatus(r); });
+      var html = option('all', 'All categories', base.length);
+
+      CATEGORIES.forEach(function (c) {
+        var n = base.filter(function (r) { return r.type === c.key; }).length;
+        html += option(c.key, c.label + (c.optional ? ' *' : ''), n);
+      });
+
+      html += '<li><p class="filter-builder__note">* Optional module &mdash; hidden for agencies that are not licensed for it.</p></li>';
+      document.getElementById('facet-category').innerHTML = html;
+
+      function option(key, label, count) {
+        var cls = 'facet-option' + (state.category === key ? ' active' : '') + (count === 0 ? ' is-empty' : '');
+        return '<li><button type="button" class="' + cls + '" data-category="' + key + '">' +
+               '<span>' + label + '</span><span class="facet-option__count">' + count + '</span></button></li>';
+      }
+    }
+
+    function renderStatusFacet() {
+      var base = RECORDS.filter(function (r) { return matchesQueryAndFilters(r) && matchesCategory(r); });
+      var counts = {};
+      base.forEach(function (r) { counts[r.status] = (counts[r.status] || 0) + 1; });
+
+      var names = Object.keys(counts).sort();
+      /* Keep a checked status visible even when nothing currently matches it. */
+      state.statuses.forEach(function (s) { if (names.indexOf(s) === -1) { names.push(s); } });
+
+      document.getElementById('facet-status').innerHTML = names.length
+        ? names.map(function (s) {
+            var checked = state.statuses.indexOf(s) !== -1 ? ' checked' : '';
+            return '<li><label class="facet-check"><input type="checkbox" class="usa-checkbox__input--bordered" value="' +
+                   s + '"' + checked + '>' + s + '<span class="facet-check__count">' + (counts[s] || 0) + '</span></label></li>';
+          }).join('')
+        : '<li><p class="filter-builder__note">No statuses in the current results.</p></li>';
+    }
+
+    /* ----------------------------------------------------------------------
+       Render: filter chips
+       ---------------------------------------------------------------------- */
+    /* Shorthand typed in the omnibox reads better with a short label than with
+       the long form-field label (status:approved -> "Status", not
+       "Submission Review Status"). */
+    var SHORT_LABEL = { status: 'Status', title: 'Name', licenseType: 'Type', idValue: 'Asset ID' };
+
+    function labelFor(key, typed) {
+      if (typed && SHORT_LABEL[key]) { return SHORT_LABEL[key]; }
+      var f = FIELDS.filter(function (x) { return x.key === key; })[0];
+      return f ? f.label : key;
+    }
+
+    function renderChips() {
+      var chips = state.filters.map(function (f, i) {
+        return '<span class="filter-chip"><span class="filter-chip__label"><strong>' + labelFor(f.key) + ':</strong> ' + f.value + '</span>' +
+               '<button type="button" class="filter-chip__remove" data-remove="' + i + '" aria-label="Remove filter ' + labelFor(f.key) + '">&times;</button></span>';
+      });
+
+      /* field:value typed in the omnibox shows up as a chip too, so typed and
+         clicked filters read the same way. */
+      syntaxFilters().forEach(function (f) {
+        chips.push('<span class="filter-chip"><span class="filter-chip__label"><strong>' + labelFor(f.key, true) + ':</strong> ' + f.value +
+                   '</span><span class="filter-chip__label" style="color:#565c65;font-size:1.3rem;">typed</span></span>');
+      });
+
+      document.getElementById('filter-chips').innerHTML = chips.join('');
+      document.getElementById('btn-clear-filters').hidden = state.filters.length === 0;
+    }
+
+    /* ----------------------------------------------------------------------
+       Render: results table
+       ---------------------------------------------------------------------- */
+    function renderResults() {
+      var rows = results();
+      var cols = COLUMNS[state.category] || COLUMNS.all;
+      var wrap = document.getElementById('results-wrap');
+
+      document.getElementById('entries-count').textContent =
+        'Showing ' + (rows.length ? 1 : 0) + ' - ' + rows.length + ' of ' + rows.length + ' Entries';
+
+      var scope = state.category === 'all' ? 'all categories' : CATEGORY_LABEL[state.category];
+      var term = freeText();
+      document.getElementById('results-summary').innerHTML = rows.length
+        ? '<strong>' + rows.length + '</strong> result' + (rows.length === 1 ? '' : 's') +
+          (term ? ' for <strong>&ldquo;' + term + '&rdquo;</strong>' : '') + ' in ' + scope + '.'
+        : 'No results' + (term ? ' for <strong>&ldquo;' + term + '&rdquo;</strong>' : '') + ' in ' + scope + '.';
+
+      if (!rows.length) {
+        wrap.innerHTML = '<div class="result-empty"><p class="margin-0 text-bold">Nothing matched.</p>' +
+          '<p class="margin-top-1 margin-bottom-0">Try a shorter term, remove a filter, or switch the category to <em>All categories</em>.</p></div>';
+        return;
+      }
+
+      var html = '<table class="usa-table usa-table--borderless usa-table--striped"><thead><tr>';
+      cols.forEach(function (c) {
+        html += '<th scope="col" role="columnheader" aria-sort="none">' + c.label + ' <span class="sort-arrows"></span></th>';
+      });
+      html += '<th scope="col" role="columnheader" style="white-space: nowrap;">Controls</th></tr></thead><tbody>';
+
+      rows.forEach(function (r) {
+        html += '<tr>';
+        cols.forEach(function (c) { html += '<td>' + c.render(r) + '</td>'; });
+        var ctl = CONTROLS[r.type];
+        html += '<td style="white-space: nowrap;"><a href="' + ctl.href + '" class="icon-button" aria-label="' + ctl.label + '">' +
+                '<img src="assets/' + ctl.icon + '" alt="" width="30" height="30"></a></td></tr>';
+      });
+
+      wrap.innerHTML = html + '</tbody></table>';
+    }
+
+    function render() {
+      renderCategoryFacet();
+      renderStatusFacet();
+      renderChips();
+      renderResults();
+    }
+
+    /* ----------------------------------------------------------------------
+       Add Filter picker
+       ---------------------------------------------------------------------- */
+    function renderFieldPicker() {
+      var scoped = state.category === 'all' ? FIELDS : FIELDS.filter(function (f) { return f.cat === state.category; });
+      var html = '<option value="">Please Select</option>';
+
+      CATEGORIES.forEach(function (c) {
+        var group = scoped.filter(function (f) { return f.cat === c.key; });
+        if (!group.length) { return; }
+        html += '<optgroup label="' + c.label + '">';
+        group.forEach(function (f) { html += '<option value="' + f.key + '">' + f.label + '</option>'; });
+        html += '</optgroup>';
+      });
+
+      document.getElementById('fb-field').innerHTML = html;
+      document.getElementById('fb-note').innerHTML = state.category === 'all'
+        ? 'Showing fields for <strong>all categories</strong>. Adding a field narrows the results to its category.'
+        : 'Showing the <strong>' + CATEGORY_LABEL[state.category] + '</strong> fields. Choose <em>All categories</em> in the rail to see every field.';
+    }
+
+    function renderValueControl(key) {
+      var wrap = document.getElementById('fb-value-wrap');
+      var field = FIELDS.filter(function (f) { return f.key === key; })[0];
+
+      if (!field) {
+        wrap.innerHTML = '<label class="usa-label" for="fb-value">Value</label>' +
+                         '<input class="usa-input" id="fb-value" name="fb-value" type="text" disabled>';
+        return;
+      }
+
+      var label = '<label class="usa-label" for="fb-value">' + field.label + '</label>';
+      if (field.control === 'select') {
+        wrap.innerHTML = label + '<select class="usa-select" id="fb-value" name="fb-value"><option value="">Please Select</option>' +
+          field.options.map(function (o) { return '<option value="' + o + '">' + o + '</option>'; }).join('') + '</select>';
+      } else if (field.control === 'date') {
+        wrap.innerHTML = label + '<input class="usa-input" id="fb-value" name="fb-value" type="text" placeholder="MM/DD/YYYY">';
+      } else {
+        wrap.innerHTML = label + '<input class="usa-input" id="fb-value" name="fb-value" type="text">';
+      }
+    }
+
+    /* ----------------------------------------------------------------------
+       Typeahead
+       ---------------------------------------------------------------------- */
+    function renderSuggestions() {
+      var box = document.getElementById('omni-suggestions');
+      var input = document.getElementById('omni-query');
+      var term = input.value.trim().toLowerCase();
+
+      if (term.length < 2) {
+        box.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      var hits = RECORDS.filter(function (r) { return haystack(r).indexOf(term) !== -1; }).slice(0, 8);
+      if (!hits.length) {
+        box.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      var html = '';
+      var lastType = null;
+      hits.forEach(function (r) {
+        if (r.type !== lastType) {
+          html += '<div class="suggestions__group">' + CATEGORY_LABEL[r.type] + '</div>';
+          lastType = r.type;
+        }
+        html += '<button type="button" class="suggestions__item" role="option" data-suggest="' + plain(r.title).trim() + '">' +
+                '<strong>' + r.title + '</strong><span class="suggestions__meta">' + r.id + ' &middot; ' + r.status + '</span></button>';
+      });
+
+      box.innerHTML = html;
+      box.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+    }
+
+    /* ----------------------------------------------------------------------
+       Events
+       ---------------------------------------------------------------------- */
+    var queryInput = document.getElementById('omni-query');
+
+    queryInput.addEventListener('input', renderSuggestions);
+    queryInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { runSearch(); }
+      if (e.key === 'Escape') { document.getElementById('omni-suggestions').hidden = true; }
+    });
+    queryInput.addEventListener('blur', function () {
+      setTimeout(function () { document.getElementById('omni-suggestions').hidden = true; }, 150);
+    });
+
+    document.getElementById('omni-suggestions').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-suggest]');
+      if (!btn) { return; }
+      queryInput.value = btn.getAttribute('data-suggest');
+      this.hidden = true;
+      runSearch();
+    });
+
+    function runSearch() {
+      state.query = queryInput.value;
+      document.getElementById('omni-suggestions').hidden = true;
+      render();
+    }
+
+    document.getElementById('btn-search').addEventListener('click', runSearch);
+
+    document.getElementById('btn-clear').addEventListener('click', function () {
+      queryInput.value = '';
+      state.query = '';
+      state.category = 'all';
+      state.statuses = [];
+      state.updated = 'any';
+      state.sort = 'relevance';
+      state.filters = [];
+      document.getElementById('facet-updated').value = 'any';
+      document.getElementById('sort-by').value = 'relevance';
+      document.getElementById('filter-builder').hidden = true;
+      renderFieldPicker();
+      render();
+    });
+
+    document.querySelectorAll('[data-recent]').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        queryInput.value = this.getAttribute('data-recent');
+        runSearch();
+      });
+    });
+
+    document.getElementById('facet-category').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-category]');
+      if (!btn || btn.classList.contains('is-empty')) { return; }
+      state.category = btn.getAttribute('data-category');
+      renderFieldPicker();
+      renderValueControl('');
+      render();
+    });
+
+    document.getElementById('facet-status').addEventListener('change', function (e) {
+      if (e.target.type !== 'checkbox') { return; }
+      var v = e.target.value;
+      if (e.target.checked) {
+        if (state.statuses.indexOf(v) === -1) { state.statuses.push(v); }
+      } else {
+        state.statuses = state.statuses.filter(function (s) { return s !== v; });
+      }
+      render();
+    });
+
+    document.getElementById('facet-updated').addEventListener('change', function () {
+      state.updated = this.value;
+      render();
+    });
+
+    document.getElementById('sort-by').addEventListener('change', function () {
+      state.sort = this.value;
+      renderResults();
+    });
+
+    document.getElementById('btn-add-filter').addEventListener('click', function () {
+      var panel = document.getElementById('filter-builder');
+      panel.hidden = !panel.hidden;
+      if (!panel.hidden) { document.getElementById('fb-field').focus(); }
+    });
+
+    document.getElementById('fb-field').addEventListener('change', function () {
+      renderValueControl(this.value);
+    });
+
+    document.getElementById('btn-apply-filter').addEventListener('click', function () {
+      var key = document.getElementById('fb-field').value;
+      var valueEl = document.getElementById('fb-value');
+      var value = valueEl ? valueEl.value.trim() : '';
+      if (!key || !value) { return; }
+
+      state.filters.push({ key: key, value: value });
+      document.getElementById('fb-field').value = '';
+      renderValueControl('');
+      document.getElementById('filter-builder').hidden = true;
+      render();
+    });
+
+    document.getElementById('filter-chips').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-remove]');
+      if (!btn) { return; }
+      state.filters.splice(parseInt(btn.getAttribute('data-remove'), 10), 1);
+      render();
+    });
+
+    document.getElementById('btn-clear-filters').addEventListener('click', function () {
+      state.filters = [];
+      render();
+    });
+
+    /* Initial paint */
+    renderFieldPicker();
+    render();
+  </script>
+</body>
+</html>
